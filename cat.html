@@ -2091,20 +2091,22 @@ body.reveal-ready #connect-section{
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 22px;
         margin-top: 26px;
         padding: 0;
     }
 
     .services-person-wrap{
+        position: relative;
         order: 5;
-        width: min(70vw, 260px);
+        width: min(78vw, 300px);
+        margin-top: 80px;
     }
 
     .service-card{
         width: 100%;
         max-width: none;
-        min-height: auto;
+        min-height: 310px;
         aspect-ratio: auto;
         border-radius: 8px;
         padding: 48px 14px 14px;
@@ -2117,9 +2119,9 @@ body.reveal-ready #connect-section{
         left: auto;
         top: auto;
         width: 100%;
-        min-height: auto;
+        min-height: 235px;
         border-radius: 8px;
-        padding: 28px 20px 22px;
+        padding: 34px 20px 24px;
     }
 
     .service-note h3{
@@ -2129,6 +2131,43 @@ body.reveal-ready #connect-section{
     .service-note p{
         font-size: 14px;
         text-align: left;
+    }
+
+    .works-label,
+    .works-arrow,
+    .idea-text,
+    .idea-arrow{
+        display: block;
+        z-index: 7;
+    }
+
+    .works-label{
+        left: 58%;
+        top: auto;
+        bottom: 310px;
+        font-size: 20px;
+    }
+
+    .works-arrow{
+        left: 55%;
+        top: auto;
+        bottom: 250px;
+        width: 58px;
+    }
+
+    .idea-text{
+        left: 8%;
+        top: auto;
+        bottom: 110px;
+        font-size: 18px;
+        line-height: 1.15;
+    }
+
+    .idea-arrow{
+        left: 18%;
+        top: auto;
+        bottom: 220px;
+        width: 64px;
     }
 
     .ready-pill{
@@ -2197,26 +2236,26 @@ body.reveal-ready #connect-section{
         display: block;
         order: 2;
         width: 100%;
-        min-height: 500px;
+        min-height: 550px;
         margin-top: 24px;
         overflow: hidden;
     }
 
     .connect-person{
-        left: 50%;
-        bottom: -34px;
-        width: min(74vw, 300px);
+        left: 40%;
+        bottom: -44px;
+        width: min(90vw, 370px);
         transform: translateX(-50%);
     }
 
     .connect-arrow{
-        left: 58%;
+        left: 54%;
         top: 54px;
         width: 58px;
     }
 
     .hire-copy{
-        left: 48%;
+        left: 44%;
         top: 118px;
         min-width: 160px;
     }
