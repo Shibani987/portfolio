@@ -1,0 +1,2379 @@
+	<html><link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><style>
+    
+html,
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #0c0207;
+    overflow-x: hidden;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+#marco{
+    --cat-width: clamp(170px, 42vw, 507.5px);
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    left: 0;
+    top: 0;
+    }
+
+#cielo{
+   
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,  #0B4C5F 0%,#04B4AE 52%,#0c0207 100%); 
+    position: absolute;
+    z-index: 0;
+    
+    
+    }
+
+#edificios{
+    background: url('https://res.cloudinary.com/pastelitos/image/upload/v1610526533/eva/edificiosOne_fsg7nx.svg');
+    height: 90%; 
+    width: 200%;
+    z-index: 2;
+    top: 26%;
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    background-size: auto 74%;
+    -webkit-animation: animar_edificios 120s linear infinite;
+    -ms-animation: animar_edificios 120s linear infinite;
+    -moz-animation: animar_edificios 120s linear infinite;
+    position: absolute;
+    }
+
+/* Animacion edificios */
+
+   @keyframes  animar_edificios {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+    @-webkit-keyframes  animar_edificios {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+    @-ms-keyframes  animar_edificios {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+    @-moz-keyframes  animar_edificios {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+   
+#luna {
+    width: clamp(64px, 7vw, 120px);
+    height: clamp(64px, 7vw, 120px);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: clamp(16px, 1.75vw, 30px) clamp(5px, .6vw, 10px) 0 #F7F8E0;
+    -webkit-box-shadow: clamp(16px, 1.75vw, 30px) clamp(5px, .6vw, 10px) 0 #F7F8E0;
+    box-shadow: clamp(16px, 1.75vw, 30px) clamp(5px, .6vw, 10px) 0 #F7F8E0;
+    top: clamp(14px, 2vw, 20px);
+    left: 58%;
+    position: absolute;
+    z-index: 1;
+    }
+
+#muro{
+    height: 23%;
+    width: 100%;
+    background: -moz-linear-gradient(top,  #416663 0%, #0c0207 19%); 
+    background: -webkit-linear-gradient(top,  #416663 0%,#0c0207 19%); 
+    background: linear-gradient(to bottom,  #416663 0%,#0c0207 19%); 
+    position: absolute;
+    z-index: 3;
+    bottom: 0; 
+    }
+
+#gato{
+    background: url('https://res.cloudinary.com/pastelitos/image/upload/v1610526571/eva/gatito_pushui.svg');
+    height: calc(var(--cat-width) * .58522); 
+    width: var(--cat-width);
+    left: clamp(8px, 2vw, 40px);
+    bottom: clamp(118px, 32vw, 163px);
+    z-index: 4;
+    position: absolute;
+    background-size: calc(var(--cat-width) * 16) auto;
+    -webkit-animation: sprite-animation 1.2s steps(16,end) infinite;
+    -moz-animation: sprite-animation 1.2s steps(16,end) infinite; 
+    -ms-animation: sprite-animation 1.2s steps(16,end) infinite; 
+    animation: sprite-animation 1.2s steps(16,end) infinite;
+    }
+
+#intro-text{
+    position: absolute;
+    top: clamp(150px, 13vw, 185px);
+    left: clamp(110px, 42vw, calc(100vw - 30ch - 16px));
+    z-index: 5;
+    color: #ffffff;
+    font-family: "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(12px, 2.6vw, 31px);
+    font-weight: 600;
+    letter-spacing: 0;
+    text-shadow: 0 2px 2px rgba(0,0,0,.35);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: reveal-text 1s steps(29,end) 1s forwards;
+    }
+
+#intro-arrow{
+    position: absolute;
+    top: clamp(154px, 13.4vw, 190px);
+    left: clamp(112px, 35vw, 471px);
+    z-index: 5;
+    width: clamp(54px, 7.3vw, 88px);
+    height: auto;
+    overflow: visible;
+    }
+
+#intro-arrow path,
+#intro-arrow polyline{
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 2px 1px rgba(0,0,0,.25));
+    }
+
+#portfolio-card{
+    --card-scale: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 6;
+    width: 1100px;
+    height: 700px;
+    border-radius: 8px;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 56% 42%, rgba(4,180,174,.16), transparent 34%),
+        linear-gradient(135deg, #020d0e 0%, #061817 48%, #031111 100%);
+    box-shadow: 0 24px 60px rgba(0,0,0,.45);
+    opacity: 0;
+    transform: translate(-50%, 85%) scale(var(--card-scale));
+    transform-origin: center center;
+    animation: show-card 1.1s ease 3s forwards;
+    overflow: hidden;
+    }
+
+#portfolio-card::before,
+#portfolio-card::after{
+    content: "";
+    position: absolute;
+    width: 76px;
+    height: 58px;
+    border-color: #ffffff;
+    border-style: solid;
+    pointer-events: none;
+    }
+
+#portfolio-card::before{
+    left: 18px;
+    top: 16px;
+    border-width: 2px 0 0 2px;
+    }
+
+#portfolio-card::after{
+    right: 18px;
+    top: 16px;
+    border-width: 2px 2px 0 0;
+    }
+
+.corner-bottom-left,
+.corner-bottom-right{
+    position: absolute;
+    bottom: 16px;
+    width: 76px;
+    height: 58px;
+    border-color: #ffffff;
+    border-style: solid;
+    pointer-events: none;
+    }
+
+.corner-bottom-left{
+    left: 18px;
+    border-width: 0 0 2px 2px;
+    }
+
+.corner-bottom-right{
+    right: 18px;
+    border-width: 0 2px 2px 0;
+    }
+
+.card-nav{
+    position: absolute;
+    z-index: 3;
+    top: 46px;
+    right: 58px;
+    display: flex;
+    gap: 28px;
+    font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+    font-size: clamp(14px, 1.15vw, 20px);
+    font-weight: 600;
+    letter-spacing: .3px;
+    }
+
+.card-nav a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-copy{
+    position: absolute;
+    z-index: 3;
+    left: 64px;
+    top: 260px;
+    max-width: 360px;
+    font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+    font-weight: 600;
+    }
+
+.card-copy .eyebrow{
+    margin: 0 0 24px;
+    font-size: clamp(18px, 1.35vw, 26px);
+    font-weight: 500;
+    }
+
+.card-copy .small{
+    margin: 0 0 12px;
+    font-size: clamp(20px, 1.45vw, 28px);
+    font-weight: 600;
+    }
+
+.card-copy h1{
+    margin: 0 0 22px;
+    font-size: clamp(36px, 3.1vw, 60px);
+    font-weight: 700;
+    line-height: .95;
+    letter-spacing: 0;
+    white-space: nowrap;
+    }
+
+.card-copy .role{
+    margin: 0;
+    font-size: clamp(18px, 1.35vw, 26px);
+    font-weight: 600;
+    line-height: 1.35;
+    max-width: 340px;
+    }
+
+.card-portrait{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 2;
+    width: clamp(300px, 25vw, 460px);
+    height: min(88%, 620px);
+    transform: translateX(-50%);
+    }
+
+.card-portrait img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    display: block;
+    }
+
+.card-scroll{
+    position: absolute;
+    z-index: 3;
+    left: 64%;
+    top: 470px;
+    font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    opacity: .85;
+    }
+
+
+
+.card-social{
+    position: absolute;
+    right: 48px;
+    bottom: 58px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-social a{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.card-social a:hover{
+    transform: scale(1.1);
+}
+
+#about-section{
+    min-height: 100vh;
+    width: 100vw;
+    background:
+        radial-gradient(circle at 66% 58%, rgba(4,180,174,.28), transparent 28%),
+        radial-gradient(circle at 48% 20%, rgba(255,255,255,.04), transparent 24%),
+        linear-gradient(135deg, #061312 0%, #09201f 50%, #061312 100%);
+    color: #000000;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(420px, 620px) minmax(260px, 430px);
+    align-items: center;
+    justify-content: center;
+    gap: clamp(36px, 8vw, 110px);
+    padding: clamp(42px, 7vw, 82px);
+    box-sizing: border-box;
+}
+
+.about-card{
+    position: relative;
+    width: min(42vw, 560px);
+    aspect-ratio: 1.18;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 18px 40px rgba(0,0,0,.26);
+    display: grid;
+    place-items: center;
+    padding: clamp(30px, 4vw, 42px);
+    box-sizing: border-box;
+}
+
+.about-pin{
+    position: absolute;
+    top: clamp(14px, 2.1vw, 20px);
+    left: 50%;
+    width: clamp(28px, 3.2vw, 38px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #000000;
+    border: 5px solid #ffffff;
+    box-shadow: 0 2px 7px rgba(0,0,0,.35), 0 0 0 1px #cfcfcf;
+    transform: translateX(-50%);
+}
+
+.about-paper{
+    width: 82%;
+    min-height: auto;
+    border-radius: 16px;
+    background: #e9e9e9;
+    box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    padding: clamp(26px, 3vw, 44px);
+    box-sizing: border-box;
+    font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+}
+
+.about-paper h2{
+    margin: 0 0 clamp(16px, 2.4vw, 28px);
+    text-align: center;
+    font-size: clamp(22px, 1.8vw, 32px);
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.about-paper ul{
+    margin: 0;
+    padding-left: 1.15em;
+    font-size: clamp(14px, 1.02vw, 19px);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.about-visual{
+    position: relative;
+    align-self: end;
+    width: clamp(260px, 32vw, 420px);
+    min-height: clamp(430px, 64vw, 670px);
+}
+
+.about-person{
+    position: absolute;
+    right: 0;
+    bottom: -90px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-callout{
+    position: absolute;
+    left: -50px;
+    top: -30px;
+    color: #ffffff;
+    font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+    font-size: clamp(18px, 1.8vw, 28px);
+    font-weight: 600;
+    line-height: .95;
+    text-align: center;
+    z-index: 2;
+}
+
+.about-arrow{
+    position: absolute;
+    left: 38px;
+    top: clamp(50px, 7.8vw, 92px);
+    width: clamp(44px, 5vw, 70px);
+    z-index: 2;
+}
+
+#services-section{
+    min-height: 100vh;
+    width: 100vw;
+    background:
+        radial-gradient(circle at 60% 42%, rgba(4,180,174,.3), transparent 32%),
+        linear-gradient(135deg, #061312 0%, #0a2423 50%, #061312 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    padding: clamp(22px, 3vw, 38px) clamp(10px, 2vw, 24px);
+    box-sizing: border-box;
+    font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+}
+
+.services-title{
+    margin: 0 0 clamp(18px, 2.4vw, 30px);
+    text-align: center;
+    font-size: clamp(30px, 3.2vw, 46px);
+    line-height: .95;
+    letter-spacing: 0;
+}
+
+.services-intro{
+    max-width: min(92vw, 900px);
+    margin: 0 auto;
+    text-align: center;
+    font-size: clamp(14px, 1.25vw, 20px);
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.services-stage{
+    position: relative;
+    width: min(1180px, 100%);
+    aspect-ratio: 1.34;
+    margin: clamp(18px, 2.4vw, 32px) auto 0;
+}
+
+.service-path{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    transform: translateX(60px);
+}
+
+.service-path path{
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 9 16;
+    opacity: .95;
+}
+
+.services-person-wrap{
+    position: absolute;
+    left: 0;
+    bottom: -7%;
+    width: 32%;
+    z-index: 3;
+}
+
+.services-person{
+    width: 100%;
+    display: block;
+}
+
+.works-label{
+    position: absolute;
+    left: 18%;
+    top: 22%;
+    z-index: 4;
+    font-size: clamp(18px, 1.9vw, 30px);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.works-arrow{
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    z-index: 4;
+    width: clamp(44px, 5.5vw, 76px);
+}
+
+.idea-text{
+    position: absolute;
+    left: -1%;
+    top: 54%;
+    z-index: 4;
+    font-size: clamp(17px, 1.75vw, 27px);
+    font-weight: 500;
+    line-height: 1.24;
+}
+
+.idea-arrow{
+    position: absolute;
+    left: 3%;
+    top: 47%;
+    z-index: 4;
+    width: clamp(50px, 6vw, 86px);
+}
+
+.service-card{
+    position: absolute;
+    z-index: 2;
+    width: 29%;
+    aspect-ratio: 1;
+    border-radius: 24px;
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 16px 32px rgba(0,0,0,.26);
+}
+
+.service-card::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    width: 9%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #000000;
+    border: 5px solid #ffffff;
+    box-shadow: 0 2px 7px rgba(0,0,0,.35), 0 0 0 1px #cfcfcf;
+    transform: translateX(-50%);
+}
+
+.service-note{
+    position: absolute;
+    left: 13%;
+    top: 20%;
+    width: 74%;
+    min-height: 58%;
+    border-radius: 18px;
+    background: #e9e9e9;
+    box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    box-sizing: border-box;
+    padding: 12% 10%;
+}
+
+.service-note h3{
+    margin: 0 0 8%;
+    text-align: center;
+    ont-size: clamp(15px, 1.6vw, 24px);
+    line-height: .95;
+}
+
+.service-note p{
+    margin: 0;
+     font-size: clamp(9px,0.9vw,14px);
+    line-height: 1.35;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.service-design{
+    left: 32%;
+    top: 9%;
+    transform: rotate(13deg);
+}
+
+.service-plan{
+    right: 4%;
+    top: 0;
+    transform: rotate(-10deg);
+}
+
+.service-launch{
+    left: 32%;
+    top: 57%;
+    transform: rotate(14deg);
+}
+
+.service-build{
+    right: 1%;
+    top: 47%;
+    transform: rotate(-10deg);
+}
+
+.ready-pill{
+    position: absolute;
+    right: 8%;
+    bottom: 4%;
+    z-index: 3;
+    min-width: 230px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    font-size: clamp(20px, 2.2vw, 34px);
+    font-weight: 800;
+    padding: .28em 1.2em;
+    box-sizing: border-box;
+}
+
+#tools-section{
+    min-height: auto;
+    width: 100vw;
+    background:
+        radial-gradient(circle at 55% 18%, rgba(4,180,174,.24), transparent 24%),
+        linear-gradient(135deg, #061312 0%, #0a2423 46%, #061312 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 30px 0 0;
+    font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+}
+
+.tools-copy{
+    width: min(86vw, 980px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tools-copy h2{
+    margin: 0 0 10px;
+    font-size: clamp(32px, 3.6vw, 54px);
+    line-height: 1;
+}
+
+.tools-copy p{
+    margin: 0 0 10px;
+    max-width: 940px;
+    font-size: clamp(16px, 1.4vw, 22px);
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.tools-balls{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    min-height: auto;
+    padding: 0 20px 30px;
+    background: transparent;
+    margin-top: 0;
+}
+
+.tool-ball{
+    --ball-size: clamp(78px, 10vw, 158px);
+    --ball-color: #1689ff;
+    --ball-dark: #052655;
+    width: var(--ball-size);
+    height: var(--ball-size);
+    flex: 0 0 var(--ball-size);
+    border-radius: 50%;
+    border: 0;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font: 800 clamp(14px, 1.65vw, 30px)/1 "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+    letter-spacing: 0;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(22%);
+    transition: transform .35s ease, filter .35s ease;
+    background:
+        radial-gradient(circle at 30% 22%, rgba(255,255,255,.95) 0 7%, rgba(255,255,255,.4) 8% 16%, transparent 17%),
+        radial-gradient(circle at 35% 30%, var(--ball-color), var(--ball-dark) 72%);
+    box-shadow:
+        inset -18px -22px 32px rgba(0,0,0,.55),
+        inset 16px 15px 24px rgba(255,255,255,.28),
+        0 22px 20px rgba(0,0,0,.48);
+}
+
+.tool-ball:hover{
+    transform: translate(var(--move-x, 0), calc(22% + var(--move-y, -44px))) rotate(var(--spin, 10deg));
+    filter: brightness(1.12);
+}
+
+.tool-ball small{
+    display: block;
+    font-size: .64em;
+}
+
+.tool-html{ --ball-color:#ef3c24; --ball-dark:#8e0b06; --move-x:-22px; --move-y:-54px; --spin:-14deg; }
+.tool-css{ --ball-color:#168cff; --ball-dark:#063165; --move-x:16px; --move-y:-62px; --spin:12deg; }
+.tool-js{ --ball-color:#ffd91f; --ball-dark:#aa7d00; --move-x:12px; --move-y:-72px; --spin:9deg; color:#080808; }
+.tool-python{ --ball-color:#171d26; --ball-dark:#020307; --move-x:-16px; --move-y:-64px; --spin:-10deg; }
+.tool-react{ --ball-color:#1aa9ff; --ball-dark:#04285f; --move-x:18px; --move-y:-70px; --spin:16deg; }
+.tool-django{ --ball-color:#0b514a; --ball-dark:#021a18; --move-x:-18px; --move-y:-58px; --spin:-12deg; }
+.tool-flask{ --ball-color:#f5f5fb; --ball-dark:#9d9da4; --move-x:14px; --move-y:-65px; --spin:13deg; color:#050505; }
+.tool-c{ --ball-color:#3b2ca8; --ball-dark:#10073c; --move-x:-12px; --move-y:-55px; --spin:-15deg; }
+.tool-sql{ --ball-color:#0277c8; --ball-dark:#002849; --move-x:20px; --move-y:-62px; --spin:10deg; }
+.tool-tailwind{ --ball-color:#22d3ee; --ball-dark:#075668; --move-x:-20px; --move-y:-66px; --spin:-8deg; }
+.tool-bootstrap{ --ball-color:#7c3aed; --ball-dark:#26104d; --move-x:18px; --move-y:-58px; --spin:14deg; }
+.tool-mysql{ --ball-color:#f59e0b; --ball-dark:#703800; --move-x:-16px; --move-y:-70px; --spin:-14deg; }
+.tool-postgres{ --ball-color:#3b82f6; --ball-dark:#102a58; --move-x:14px; --move-y:-60px; --spin:12deg; }
+.tool-mongo{ --ball-color:#22c55e; --ball-dark:#06451f; --move-x:-18px; --move-y:-64px; --spin:-12deg; }
+.tool-firebase{ --ball-color:#f97316; --ball-dark:#7c2506; --move-x:18px; --move-y:-68px; --spin:13deg; }
+
+#projects-section{
+    min-height: 100vh;
+    width: 100vw;
+    background:
+        radial-gradient(circle at 55% 35%, rgba(4,180,174,.3), transparent 33%),
+        linear-gradient(135deg, #061312 0%, #0a2423 50%, #061312 100%);
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: clamp(54px, 7vw, 92px) clamp(18px, 4vw, 64px);
+    font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+}
+
+.projects-copy{
+    text-align: center;
+    width: min(86vw, 680px);
+    margin: 0 auto clamp(44px, 6vw, 72px);
+}
+
+.projects-copy h2{
+    margin: 0 0 clamp(20px, 2.8vw, 34px);
+    font-size: clamp(34px, 4vw, 58px);
+    line-height: 1;
+}
+
+.projects-copy p{
+    margin: 0 auto;
+    font-size: clamp(15px, 1.28vw, 20px);
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.projects-grid{
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(28px, 4vw, 54px);
+    align-items: stretch;
+}
+
+.project-card{
+    min-height: 430px;
+    height: 100%;
+    border-radius: 22px;
+    background: #050707;
+    box-shadow: 0 24px 48px rgba(0,0,0,.34);
+    padding: clamp(22px, 2.4vw, 30px);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transform: translateY(0);
+    transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
+}
+
+.project-thumb{
+    height: clamp(190px, 20vw, 270px);
+    border-radius: 8px;
+    background:
+        linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.02)),
+        linear-gradient(150deg, #23282d 0 45%, #101215 46% 100%);
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+.project-thumb img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .5s ease, filter .5s ease;
+}
+
+.project-thumb:has(img)::before,
+.project-thumb:has(img)::after{
+    display: none;
+}
+
+.project-thumb::before{
+    content: "";
+    position: absolute;
+    left: 18%;
+    top: 22%;
+    width: 62%;
+    height: 42%;
+    border-radius: 4px;
+    background: var(--project-accent, #20d6a2);
+    transform: perspective(280px) rotateY(-22deg) rotateX(8deg);
+    box-shadow: 0 18px 24px rgba(0,0,0,.38);
+}
+
+.project-thumb::after{
+    content: "";
+    position: absolute;
+    left: 18%;
+    bottom: 16%;
+    width: 66%;
+    height: 9%;
+    border-radius: 50%;
+    background: rgba(0,0,0,.42);
+    filter: blur(7px);
+}
+
+.project-card h3{
+    margin: 22px 34px 10px 0;
+    font-size: clamp(19px, 1.55vw, 25px);
+    line-height: 1.1;
+}
+
+.project-card p{
+    margin: 0;
+    font-size: clamp(12px, .95vw, 15px);
+    line-height: 1.35;
+    color: rgba(255,255,255,.86);
+}
+
+.project-card:hover,
+.project-card:focus-within{
+    transform: translateY(-14px) scale(1.02);
+    background: #071514;
+    box-shadow: 0 34px 64px rgba(0,0,0,.48), 0 0 0 1px rgba(4,180,174,.22);
+}
+
+.project-card:hover .project-thumb img,
+.project-card:focus-within .project-thumb img{
+    transform: scale(1.08);
+    filter: brightness(1.08) saturate(1.12);
+}
+
+.project-card:hover .project-link,
+.project-card:focus-within .project-link{
+    transform: translate(4px, -4px) rotate(8deg);
+    color: #42f0dd;
+}
+
+.project-link{
+    position: absolute;
+    right: 20px;
+    top: calc(clamp(190px, 20vw, 270px) + 34px);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 34px;
+    line-height: 1;
+    transition: transform .35s ease, color .35s ease;
+}
+
+.project-detail-page{
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    overflow-y: auto;
+    background: #0d0f0e;
+    color: #ffffff;
+    font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+    padding: clamp(22px, 4vw, 48px);
+    box-sizing: border-box;
+}
+
+.project-detail-page.is-open{
+    display: block;
+}
+
+body.project-detail-open{
+    overflow: hidden;
+}
+
+.project-detail-inner{
+    width: min(1020px, 100%);
+    margin: 0 auto;
+}
+
+.project-detail-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.project-back{
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    font: 700 clamp(22px, 2.6vw, 34px)/1 "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+    cursor: pointer;
+}
+
+.project-detail-title{
+    margin: 0;
+    flex: 1;
+    font-size: clamp(28px, 3vw, 44px);
+    line-height: 1;
+}
+
+.project-detail-tag{
+    border: 1px solid #f5df35;
+    border-radius: 999px;
+    color: #f5df35;
+    padding: 5px 13px;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.project-hero-image{
+    width: 100%;
+    aspect-ratio: 16 / 8.8;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #050505;
+    box-shadow: 0 20px 50px rgba(0,0,0,.45);
+}
+
+.project-hero-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-detail-description{
+    margin: 30px auto 22px;
+    max-width: 720px;
+    text-align: center;
+    color: #cdeeea;
+    font-size: clamp(16px, 1.6vw, 22px);
+    line-height: 1.35;
+}
+
+.project-gallery-title{
+    margin: 34px 0 18px;
+    font-size: clamp(24px, 2.5vw, 34px);
+}
+
+.project-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.project-gallery-item{
+    min-height: 220px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #050505;
+}
+
+.project-gallery-item:first-child{
+    grid-row: span 2;
+}
+
+.project-gallery-item img,
+.project-gallery-item video{
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-meta{
+    margin-top: 30px;
+}
+
+.project-meta h3{
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.project-tech-list,
+.project-action-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-tech-list li{
+    border-radius: 4px;
+    background: rgba(255,255,255,.1);
+    color: #ffffff;
+    padding: 6px 10px;
+    font: 700 13px Arial, sans-serif;
+}
+
+.project-action-list{
+    margin-top: 22px;
+}
+
+.project-action-list a{
+    color: #9eb6c8;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.project-action-list a:hover{
+    color: #42f0dd;
+}
+
+#connect-section{
+    min-height: 100vh;
+    width: 100vw;
+    background:
+        radial-gradient(circle at 18% 88%, rgba(4,180,174,.34), transparent 28%),
+        radial-gradient(circle at 56% 28%, rgba(255,255,255,.035), transparent 24%),
+        linear-gradient(135deg, #061312 0%, #09201f 52%, #061312 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: clamp(42px, 6vw, 76px) clamp(18px, 5vw, 80px) 0;
+    font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+}
+
+.connect-head{
+    text-align: center;
+    margin-bottom: clamp(36px, 5vw, 76px);
+}
+
+.connect-head h2{
+    margin: 0 0 clamp(18px, 2.2vw, 28px);
+    font-size: clamp(36px, 4vw, 58px);
+    line-height: 1;
+}
+
+.connect-head p{
+    margin: 0;
+    font-size: clamp(17px, 1.45vw, 23px);
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.connect-body{
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(340px, 500px) minmax(320px, 470px);
+    align-items: center;
+    justify-content: center;
+    gap: clamp(48px, 9vw, 130px);
+}
+
+.connect-left{
+    position: relative;
+    min-height: clamp(560px, 66vw, 700px);
+}
+
+.connect-person{
+    position: absolute;
+    left: -60px;
+    bottom: -72px;
+    width: clamp(310px, 34vw, 480px);
+    display: block;
+}
+
+.connect-arrow{
+    position: absolute;
+    left: clamp(220px, 22vw, 310px);
+    top: clamp(60px, 7vw, 94px);
+    width: clamp(64px, 6vw, 88px);
+}
+.hire-copy{
+    position: absolute;
+    left: clamp(200px, 20vw, 300px);
+    top: clamp(146px, 15vw, 190px);
+    min-width: 320px;
+}
+
+.hire-copy h3{
+    margin: 0 0 clamp(52px, 5vw, 70px);
+    font-size: clamp(34px, 3.5vw, 54px);
+    line-height: 1;
+}
+
+.hire-copy p{
+    margin: 0 0 18px;
+    font-size: clamp(18px, 1.55vw, 25px);
+    line-height: 1.25;
+}
+
+.contact-panel{
+    width: min(100%, 460px);
+    min-height: 380px;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(4,180,174,.28), transparent 60%),
+        repeating-radial-gradient(circle at center, rgba(255,255,255,.08) 0 1px, transparent 1px 4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    padding: clamp(28px, 4vw, 48px);
+    box-sizing: border-box;
+}
+
+.contact-field{
+    background: #ffffff;
+    color: #000000;
+    border-radius: 16px;
+    padding: 16px 28px;
+}
+
+.contact-field label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact-field input,
+.contact-field textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #0a777a;
+    padding: 8px 10px;
+    font: 500 13px Arial, sans-serif;
+    outline: none;
+    resize: none;
+}
+
+.contact-field textarea{
+    height: 54px;
+}
+
+.submit-btn{
+    align-self: center;
+    min-width: 110px;
+    border: 0;
+    border-radius: 999px;
+    background: #075c62;
+    color: #ffffff;
+    padding: 8px 28px;
+    font: 700 11px Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0,0,0,.26);
+}
+
+.submit-btn:disabled{
+    cursor: wait;
+    opacity: .72;
+}
+
+.form-status{
+    min-height: 18px;
+    margin: -16px 0 0;
+    color: #ffffff;
+    text-align: center;
+    font: 700 13px Arial, sans-serif;
+}
+
+.form-status.is-error{
+    color: #ffb4a8;
+}
+
+.form-status.is-success{
+    color: #b9ffe6;
+}
+
+.site-footer{
+    width: 100vw;
+    background: #061312;
+    color: #ffffff;
+    padding: 34px 48px;
+    box-sizing: border-box;
+    font: 500 13px "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+}
+
+body.reveal-ready #about-section,
+body.reveal-ready #services-section,
+body.reveal-ready #tools-section,
+body.reveal-ready #projects-section,
+body.reveal-ready #connect-section{
+    opacity: 0;
+    transform: translateY(70px);
+    filter: blur(8px);
+    transition:
+        opacity .9s ease,
+        transform .9s cubic-bezier(.2,.8,.2,1),
+        filter .9s ease;
+    will-change: opacity, transform, filter;
+}
+
+body.reveal-ready #about-section.section-in-view,
+body.reveal-ready #services-section.section-in-view,
+body.reveal-ready #tools-section.section-in-view,
+body.reveal-ready #projects-section.section-in-view,
+body.reveal-ready #connect-section.section-in-view{
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+body.reveal-ready #services-section{
+    transition-delay: .08s;
+}
+
+body.reveal-ready #tools-section{
+    transition-delay: .12s;
+}
+
+body.reveal-ready #projects-section{
+    transition-delay: .08s;
+}
+
+body.reveal-ready #connect-section{
+    transition-delay: .1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.reveal-ready #about-section,
+    body.reveal-ready #services-section,
+    body.reveal-ready #tools-section,
+    body.reveal-ready #projects-section,
+    body.reveal-ready #connect-section{
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+    }
+}
+
+.portrait-arrow{
+    position: absolute;
+    z-index: 4;
+    width: 110px;
+    height: auto;
+    display: block;
+    }
+
+.portrait-arrow-left{
+    left: 38%;
+    top: 42%;
+    }
+
+.portrait-arrow-right{
+    left: 56%;
+    top: 46%;
+    }
+
+@keyframes show-card {
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(var(--card-scale));
+    }
+}
+
+@keyframes reveal-text {
+        from { width: 0; }
+        to { width: 29ch; }
+    }
+
+@-webkit-keyframes sprite-animation { 
+        from { background-position: 0 0; }
+        to { background-position: calc(var(--cat-width) * -16) 0; } 
+    }
+
+@-ms-keyframes sprite-animation { 
+        from { background-position: 0 0; }
+        to { background-position: calc(var(--cat-width) * -16) 0; }
+    }
+
+@-moz-keyframes sprite-animation { 
+        from { background-position: 0 0; }
+        to { background-position: calc(var(--cat-width) * -16) 0; }
+    }
+
+@keyframes sprite-animation { 
+        from { background-position: 0 0; }
+        to { background-position: calc(var(--cat-width) * -16) 0; }
+    }
+
+@media (min-width: 901px) {
+    #marco{
+        --cat-width: 507.5px;
+        min-height: 100vh;
+        height: 100vh;
+    }
+
+    #gato{
+        bottom: 105px;
+    }
+
+    #intro-text{
+        top: 170px;
+        left: 630px;
+        font-size: 31px;
+    }
+
+    #intro-arrow{
+        top: 174px;
+        left: 535px;
+        width: 88px;
+    }
+
+  
+    #portfolio-card{
+        --card-scale: 0.95;
+    }
+
+    .about-card{
+        width: clamp(460px, 38vw, 560px);
+    }
+
+    .about-paper{
+        width: 82%;
+    }
+
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+    .connect-person{
+        left: -64px;
+        bottom: 28px;
+        width: clamp(300px, 33vw, 390px);
+    }
+
+    .connect-left{
+        min-height: 640px;
+    }
+
+    .hire-copy{
+        left: calc(clamp(200px, 20vw, 300px) - 20px);
+    }
+}
+
+@media (min-width: 1201px) {
+    #portfolio-card{
+        --card-scale: 1;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+    #portfolio-card{
+        --card-scale: 0.9;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1000px) {
+    #portfolio-card{
+        --card-scale: 0.82;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    #gato{
+        bottom: 80px;
+    }
+     #intro-arrow{
+        top: 160px;
+    }
+
+    #intro-text{
+        top: 160px;
+        
+    }
+
+    #portfolio-card{
+        --card-scale: 0.72;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 900px) {
+    #portfolio-card{
+        --card-scale: 0.72;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 800px) {
+    #portfolio-card{
+        --card-scale: 0.62;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 700px) {
+    #portfolio-card{
+        --card-scale: 0.54;
+    }
+}
+
+@media (max-width: 600px) {
+    #marco{
+        --cat-width: clamp(170px, 55vw, 230px);
+    }#gato{
+        bottom: 70px;
+    }
+    #intro-text{
+        top: 180px;
+        left: 268px;
+        font-size: 14px;
+    }
+
+    #intro-arrow{
+        top: 180px;
+        left: 198px;
+        width: 54px;
+    }
+
+    #luna{
+        left: 70%;
+    }
+
+    #portfolio-card{
+        --card-scale: 0.48;
+    }
+
+    .services-stage{
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .services-person-wrap{
+        position: relative;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        order: 5;
+        justify-self: center;
+        transform: none;
+        width: min(280px, 72vw);
+    }
+
+    .service-card{
+        order: 1;
+        max-width: 330px;
+        justify-self: center;
+    }
+
+    .service-plan{
+        order: 2;
+    }
+
+    .service-launch{
+        order: 3;
+    }
+
+    .service-build{
+        order: 4;
+    }
+
+    .works-label,
+    .works-arrow,
+    .idea-text,
+    .idea-arrow{
+        display: block;
+        z-index: 6;
+    }
+
+    .works-label{
+        left: 56%;
+        top: auto;
+        bottom: 470px;
+        font-size: 22px;
+    }
+
+    .works-arrow{
+        left: 54%;
+        top: auto;
+        bottom: 410px;
+        width: 68px;
+    }
+
+    .idea-text{
+        left: 18%;
+        top: auto;
+        bottom: 220px;
+        font-size: 21px;
+    }
+
+    .idea-arrow{
+        left: 30%;
+        top: auto;
+        bottom: 355px;
+        width: 78px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    #portfolio-card{
+        --card-scale: 0.38;
+    }
+}
+
+@media (max-width: 900px) {
+    #about-section{
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 46px 20px 0;
+    }
+
+    .about-card{
+        justify-self: center;
+        width: min(92vw, 430px);
+    }
+
+    .about-visual{
+        justify-self: center;
+        width: min(76vw, 360px);
+        min-height: 500px;
+    }
+
+      .about-callout{
+        left: -50px;
+    }
+
+    .about-arrow{
+        left: 18%;
+    }
+
+    .services-stage{
+        width: min(760px, 100%);
+        aspect-ratio: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 42px 24px;
+        padding-top: 300px;
+    }
+
+    .service-path,
+    .works-label,
+    .works-arrow,
+    .idea-text,
+    .idea-arrow,
+    .ready-pill{
+        display: none;
+    }
+
+    .services-person-wrap{
+        left: 50%;
+        top: 0;
+        bottom: auto;
+        width: min(260px, 46vw);
+        transform: translateX(-50%);
+    }
+
+    .service-card{
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        width: 100%;
+        transform: rotate(0deg);
+    }
+
+    .tools-balls{
+        flex-wrap: wrap;
+        align-content: flex-end;
+        min-height: auto;
+        padding-top: 60px;
+        padding-bottom: 34px;
+    }
+
+    .tool-ball{
+        --ball-size: clamp(74px, 17vw, 124px);
+        transform: translateY(0);
+    }
+
+    .tool-ball:hover{
+        transform: translate(var(--move-x, 0), var(--move-y, -34px)) rotate(var(--spin, 10deg));
+    }
+
+    .projects-grid{
+        grid-template-columns: 1fr;
+        width: min(500px, 100%);
+        gap: 28px;
+    }
+
+    .project-card{
+        min-height: 430px;
+    }
+
+    .project-detail-top{
+        flex-wrap: wrap;
+    }
+
+    .project-detail-tag{
+        order: 3;
+    }
+
+    .project-gallery{
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery-item:first-child{
+        grid-row: auto;
+    }
+
+    .connect-body{
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .connect-left{
+        order: 2;
+        min-height: 560px;
+        justify-self: center;
+        width: min(92vw, 460px);
+    }
+
+    .connect-person{
+    width: min(82vw, 390px);
+    bottom: 24px;
+}
+    .connect-arrow{
+        left: 54%;
+        top: 70px;
+    }
+
+    .hire-copy{
+        left:56%;
+        top: 160px;
+        min-width: 230px;
+    }
+
+    .contact-panel{
+        order: 1;
+        justify-self: center;
+        margin-bottom: 54px;
+    }
+}
+
+@media (max-width: 560px) {
+    #about-section{
+        padding: 34px 14px 0;
+    }
+
+    .about-paper{
+        width: 88%;
+        padding: 24px 20px;
+    }
+
+    .about-paper ul{
+        font-size: 14px;
+    }
+
+    .about-visual{
+        width: min(86vw, 320px);
+        min-height: 430px;
+    }
+
+    .about-person{
+        bottom: -70px;
+    }
+      .about-callout{
+        left: -50px;
+    }
+
+    .services-stage{
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .services-person-wrap{
+        position: relative;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        order: 5;
+        justify-self: center;
+        transform: none;
+        width: min(280px, 72vw);
+    }
+
+    .service-card{
+        order: 1;
+        max-width: 330px;
+        justify-self: center;
+    }
+
+    .service-plan{
+        order: 2;
+    }
+
+    .service-launch{
+        order: 3;
+    }
+
+    .service-build{
+        order: 4;
+    }
+
+    .works-label,
+    .works-arrow,
+    .idea-text,
+    .idea-arrow{
+        display: block;
+        z-index: 6;
+    }
+
+    .works-label{
+        left: 56%;
+        top: auto;
+        bottom: 470px;
+        font-size: 22px;
+    }
+
+    .works-arrow{
+        left: 54%;
+        top: auto;
+        bottom: 410px;
+        width: 68px;
+    }
+
+    .idea-text{
+        left: 18%;
+        top: auto;
+        bottom: 220px;
+        font-size: 21px;
+    }
+
+    .idea-arrow{
+        left: 30%;
+        top: auto;
+        bottom: 355px;
+        width: 78px;
+    }
+
+    .service-note p{
+        font-size: 12px;
+    }
+
+   #tools-section{
+    padding: clamp(42px, 5vw, 70px) 0 0;
+}
+
+    .tools-balls{
+        padding-inline: 12px;
+        gap: 8px;
+    }
+
+    .tool-ball{
+        --ball-size: clamp(66px, 24vw, 98px);
+        font-size: clamp(13px, 4.2vw, 18px);
+    }
+
+    .connect-head{
+        margin-bottom: 24px;
+    }
+
+    .connect-left{
+        min-height: 560px;
+    }
+
+    .hire-copy{
+        left: 38%;
+        top: 170px;
+        min-width: 190px;
+    }
+
+    .hire-copy h3{
+        font-size: 28px;
+        margin-bottom: 34px;
+    }
+
+    .hire-copy p{
+        font-size: 15px;
+    }
+
+    .contact-panel{
+        padding: 22px 14px;
+        gap: 18px;
+    }
+
+    .contact-field{
+        padding: 14px 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-stage{
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .services-person-wrap{
+        position: relative;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        order: 5;
+        justify-self: center;
+        transform: none;
+        width: min(300px, 74vw);
+    }
+
+    .service-card{
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        order: 1;
+        width: 100%;
+        max-width: 330px;
+        justify-self: center;
+        transform: rotate(0deg);
+    }
+
+    .service-plan{
+        order: 2;
+    }
+
+    .service-launch{
+        order: 3;
+    }
+
+    .service-build{
+        order: 4;
+    }
+
+    .works-label,
+    .works-arrow,
+    .idea-text,
+    .idea-arrow{
+        display: block;
+        z-index: 6;
+    }
+
+    .works-label{
+        left: 56%;
+        top: auto;
+        bottom: 470px;
+        font-size: 22px;
+    }
+
+    .works-arrow{
+        left: 54%;
+        top: auto;
+        bottom: 410px;
+        width: 68px;
+    }
+
+    .idea-text{
+        left: 18%;
+        top: auto;
+        bottom: 220px;
+        font-size: 21px;
+    }
+
+    .idea-arrow{
+        left: 30%;
+        top: auto;
+        bottom: 355px;
+        width: 78px;
+    }
+}
+    
+   
+
+
+</style>
+    <body>
+  <script>
+    document.body.classList.add('reveal-ready');
+  </script>
+
+  <section id="marco">
+    <div id="cielo"></div>
+    <div id="luna"></div>
+    <svg id="intro-arrow" viewBox="0 0 88 70" aria-hidden="true">
+      <path d="M78 8 C58 8 46 24 48 39 C50 55 73 55 70 37 C66 14 30 24 22 49" />
+      <polyline points="66,5 78,8 74,20" />
+    </svg>
+    <div id="intro-text">Hello Kitties wanna know me ?</div>
+    <div id="gato"></div>
+    <div id="muro"></div>
+    <div id="edificios"></div>
+    <div id="portfolio-card">
+      <span class="corner-bottom-left" aria-hidden="true"></span>
+      <span class="corner-bottom-right" aria-hidden="true"></span>
+      <nav class="card-nav">
+        <a href="#projects-section">WORK</a>
+        <a href="#services-section">SERVICES</a>
+        <span>RESUME</span>
+      </nav>
+      <div class="card-copy">
+        <p class="eyebrow">welcome to my portfolio</p>
+        <p class="small">Hi i'm</p>
+        <h1>Shibani Debnath</h1>
+        <p class="role">Python Developer | Backend Engineer | Full-Stack Web Developer</p>
+      </div>
+      <div class="card-portrait" aria-hidden="true">
+        <img src="assets/me.png" alt="Shibani Debnath">
+      </div>
+      <img class="portrait-arrow portrait-arrow-left" src="assets/Vector.png" alt="" aria-hidden="true">
+      <img class="portrait-arrow portrait-arrow-right" src="assets/Vector (1).png" alt="" aria-hidden="true">
+      <p class="card-scroll">Scroll down to know me</p>
+      <div class="card-social">
+    <a href="https://github.com/Shibani987" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/shibani-debnath-84522834a/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+</div>
+    </div>
+  </section>
+  <section id="about-section">
+    <div class="about-card">
+      <span class="about-pin" aria-hidden="true"></span>
+      <div class="about-paper">
+        <h2>about me</h2>
+        <ul>
+          <li>1 year of experience as a Full-Stack Web Developer building real-world applications at xorynx</li>
+          <li>Worked on 5+ projects, integrating machine learning APIs, REST services, authentication systems, and real-time features</li>
+          <li>Freelance developer, exploring new technologies and delivering custom solutions while continuously improving product quality and performance</li>
+          <li>Secured 1st Position in the Innovative Project Competition at JISTech2K25 (2025) among 20+ competing teams </li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-visual">
+      <p class="about-callout">Want to know<br>about me ?</p>
+      <img class="about-arrow" src="assets/Vector (2).png" alt="" aria-hidden="true">
+      <img class="about-person" src="assets/me1.png" alt="Shibani Debnath">
+    </div>
+  </section>
+  <section id="services-section">
+    <h2 class="services-title">SERVICES</h2>
+    <p class="services-intro">As a Full-Stack Web Developer, I follow a structured workflow to turn ideas into reliable digital products — focusing on clear planning, smart design, efficient development, and smooth deployment for scalable, long-term solutions.</p>
+    <div class="services-stage">
+      <svg class="service-path" viewBox="0 0 1120 1000" aria-hidden="true">
+        <path d="M462 210 C575 205 603 120 700 122" />
+        <path d="M500 330 C675 410 790 520 832 692" />
+        <path d="M520 742 C657 712 674 650 800 580" />
+        <path d="M520 780 C602 935 716 946 842 938" />
+      </svg>
+      <div class="services-person-wrap">
+        <img class="services-person" src="assets/me2.png" alt="Shibani Debnath">
+      </div>
+      <p class="works-label">How&nbsp; I works</p>
+      <img class="works-arrow" src="assets/Vector (3).png" alt="" aria-hidden="true">
+      <img class="idea-arrow" src="assets/vector4.png" alt="" aria-hidden="true">
+      <p class="idea-text">Just give<br>me IDEA<br>I will<br>blow you<br>mind</p>
+      <article class="service-card service-design">
+        <div class="service-note">
+          <h3>Design</h3>
+          <p>Once the plan is clear, I move to UI/UX and system design. I design clean interfaces and logical backend structures that ensure a smooth user experience and efficient data flow.</p>
+        </div>
+      </article>
+      <article class="service-card service-plan">
+        <div class="service-note">
+          <h3>Define &amp; Plan</h3>
+          <p>I start by clearly understanding the features, goals, and target users. This includes requirement analysis, feature breakdown, choosing the right tech stack, and planning the system architecture before writing a single line of code.</p>
+        </div>
+      </article>
+      <article class="service-card service-launch">
+        <div class="service-note">
+          <h3>Launch &amp; Improve</h3>
+          <p>After thorough testing, I deploy the application and ensure everything runs smoothly in production. Post-launch, I focus on optimization, bug fixes, and improvements based on real usage and feedback.</p>
+        </div>
+      </article>
+      <article class="service-card service-build">
+        <div class="service-note">
+          <h3>Build</h3>
+          <p>I then develop the application using best coding practices, building scalable backend APIs, secure authentication, and responsive frontends while continuously testing and refining the system.</p>
+        </div>
+      </article>
+      <div class="ready-pill">ready to deliver</div>
+    </div>
+  </section>
+  <section id="tools-section">
+    <div class="tools-copy">
+      <h2>Tools I Build With</h2>
+      <p>I work with a modern tech stack to build fast, secure, and scalable web applications. From backend logic to clean user interfaces, these are the tools I use to turn ideas into production-ready products</p>
+    </div>
+    <div class="tools-balls" aria-label="Technology tools">
+      <button class="tool-ball tool-html" type="button">HTML5</button>
+      <button class="tool-ball tool-css" type="button">CSS3</button>
+      <button class="tool-ball tool-js" type="button">JS</button>
+      <button class="tool-ball tool-python" type="button">Python</button>
+      <button class="tool-ball tool-react" type="button">React</button>
+      <button class="tool-ball tool-react" type="button">next.js</button>
+      <button class="tool-ball tool-django" type="button">Django</button>
+      <button class="tool-ball tool-flask" type="button">Flask</button>
+      <button class="tool-ball tool-c" type="button">C</button>
+      <button class="tool-ball tool-sql" type="button">SQL</button>
+      <button class="tool-ball tool-tailwind" type="button">Tailwind</button>
+      <button class="tool-ball tool-bootstrap" type="button">Bootstrap</button>
+      <button class="tool-ball tool-mysql" type="button">MySQL</button>
+      <button class="tool-ball tool-postgres" type="button">PostgreSQL</button>
+      <button class="tool-ball tool-mongo" type="button">MongoDB</button>
+      <button class="tool-ball tool-firebase" type="button">Firebase</button>
+    </div>
+  </section>
+  <section id="projects-section">
+    <div class="projects-copy">
+      <h2>Projects I’ve Built</h2>
+      <p>A collection of real-world projects where I turned ideas into working products. Each project reflects my approach to planning, building, and deploying scalable full-stack applications.</p>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card" data-project="nirbhaya" tabindex="0" style="--project-accent:#18d6a0">
+        <div class="project-thumb" aria-hidden="true">
+          <img src="assets/nirvaya.png" alt="Nirbhaya – Women Safety Application">
+        </div>
+        <a class="project-link" href="#" aria-label="Open project">↗</a>
+        <h3>Nirbhaya – Women Safety Application</h3>
+        <p>A real-time women safety platform exposed to provide instant help during emergencies. Fake placeholder content for now; replace this with your project details.</p>
+      </article>
+      <article class="project-card" data-project="lifelink" tabindex="0" style="--project-accent:#d5b08b">
+        <div class="project-thumb" aria-hidden="true">
+          <img src="assets/lifelink.png" alt="LifeLink – Organ Donation & Emergency Health Network">
+        </div>
+        <a class="project-link" href="#" aria-label="Open project">↗</a>
+        <h3>LifeLink – Organ Donation &amp; Emergency Health Network</h3>
+        <p>A full-stack application connecting donors, patients, and emergency medical needs. Placeholder text ready for your final project copy.</p>
+      </article>
+      <article class="project-card" data-project="artestix" tabindex="0" style="--project-accent:#19c36b">
+        <div class="project-thumb" aria-hidden="true">
+          <img src="assets/artestix.png" alt="Artestix – Client-Based Website">
+        </div>
+        <a class="project-link" href="#" aria-label="Open project">↗</a>
+        <h3>Artestix – Client-Based Website</h3>
+        <p>A modern responsive portfolio website built for showcasing services and client work. Replace this fake project with your own details later.</p>
+      </article>
+    </div>
+  </section>
+  <section class="project-detail-page" id="project-detail-page" aria-hidden="true">
+    <div class="project-detail-inner">
+      <div class="project-detail-top">
+        <button class="project-back" type="button" aria-label="Back to projects">←</button>
+        <h2 class="project-detail-title"></h2>
+        <span class="project-detail-tag"></span>
+      </div>
+      <div class="project-hero-image">
+        <img class="project-detail-image" src="" alt="">
+      </div>
+      <p class="project-detail-description"></p>
+      <h3 class="project-gallery-title">Gallery</h3>
+      <div class="project-gallery">
+        <div class="project-gallery-item">
+          <img class="project-gallery-image" src="" alt="">
+        </div>
+        <div class="project-gallery-item">
+          <img class="project-gallery-image" src="" alt="">
+        </div>
+        <div class="project-gallery-item">
+          <img class="project-gallery-image" src="" alt="">
+        </div>
+      </div>
+      <div class="project-meta">
+        <h3>Technologies</h3>
+        <ul class="project-tech-list"></ul>
+        <ul class="project-action-list">
+          <li><a class="project-github-link" href="#" target="_blank" rel="noreferrer">GitHub</a></li>
+          <li><a class="project-live-link" href="#" target="_blank" rel="noreferrer">Live Site</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="connect-section">
+    <div class="connect-head">
+      <h2>Let’s Connect</h2>
+      <p>Got an idea or need a custom website?<br>Hire me or just say hello — I’m always open to connect.</p>
+    </div>
+    <div class="connect-body">
+      <div class="connect-left">
+        <img class="connect-person" src="assets/me3.png" alt="Shibani Debnath">
+        <img class="connect-arrow" src="assets/vector5.png" alt="" aria-hidden="true">
+        <div class="hire-copy">
+          <h3>If you want to hire me?</h3>
+          <p>Email me :</p>
+          <p>sd773064@gmail.com</p>
+        </div>
+      </div>
+      <form class="contact-panel" id="contact-form">
+        <div class="contact-field">
+          <label for="contact-name">Name:</label>
+          <input id="contact-name" name="name" type="text" placeholder="Enter your full name." required>
+        </div>
+        <div class="contact-field">
+          <label for="contact-email">EMAIL:</label>
+          <input id="contact-email" name="email" type="email" placeholder="We'll use this to contact you about your order." required>
+        </div>
+        <div class="contact-field">
+          <label for="contact-message">Anything you want to share with us</label>
+          <textarea id="contact-message" name="message" required></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Submit</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+  <footer class="site-footer">All rights are reserved © shibani2026</footer>
+
+  <script>
+    (function () {
+      var revealItems = document.querySelectorAll(
+        '#about-section, #services-section, #tools-section, #projects-section, #connect-section'
+      );
+
+      function showSection(section) {
+        section.classList.add('section-in-view');
+      }
+
+      if (!('IntersectionObserver' in window)) {
+        revealItems.forEach(showSection);
+        return;
+      }
+
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            showSection(entry.target);
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.16,
+        rootMargin: '0px 0px -8% 0px'
+      });
+
+      revealItems.forEach(function (section) {
+        revealObserver.observe(section);
+      });
+    }());
+  </script>
+
+  <script>
+    (function () {
+      var projects = {
+        nirbhaya: {
+          title: 'Nirbhaya.',
+          tag: 'Safety App',
+          image: 'assets/nirvaya.png',
+          description: 'A real-time women safety application focused on emergency support, quick alerts, and reliable user protection workflows.',
+          gallery: ['assets/nirvaya.png', 'assets/nirvaya2.png', 'assets/nirvaya.mp4'],
+          technologies: ['HTML', 'CSS', 'JavaScript', 'Python', 'Django'],
+          github: 'https://github.com/Shibani987/nirbhaya',
+          
+        },
+        lifelink: {
+          title: 'LifeLink.',
+          tag: 'HealthTech',
+          image: 'assets/lifelink.png',
+          description: 'An organ donation and emergency health network that connects hospitals, donors, and recipients through a clean full-stack workflow.',
+          gallery: ['assets/lifelink.png', 'assets/lifelink1.png', 'assets/lifelink2.png'],
+          technologies: ['React', 'Python', 'Django', 'REST API', 'SQL'],
+          github: 'https://github.com/Shibani987/lifelink',
+          
+        },
+        
+        artestix: {
+          title: 'Artestix.',
+          tag: 'Client Site',
+          image: 'assets/artestix.png',
+          description: 'A modern client-focused website for showcasing premium sticker products with a bold visual landing experience.',
+          gallery: ['assets/artestix.png', 'assets/artestix1.png', 'assets/artestix2.png'],
+          technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive UI'],
+          github: 'https://github.com/Shibani987/Artestix_MAIN.git',
+          live: 'https://artestix.xorynx.com/'
+        }
+      };
+
+      var detailPage = document.getElementById('project-detail-page');
+      if (!detailPage) return;
+
+      var title = detailPage.querySelector('.project-detail-title');
+      var tag = detailPage.querySelector('.project-detail-tag');
+      var heroImage = detailPage.querySelector('.project-detail-image');
+      var description = detailPage.querySelector('.project-detail-description');
+      var galleryItems = detailPage.querySelectorAll('.project-gallery-item');
+      var techList = detailPage.querySelector('.project-tech-list');
+      var githubLink = detailPage.querySelector('.project-github-link');
+      var liveLink = detailPage.querySelector('.project-live-link');
+      var liveLinkItem = liveLink ? liveLink.closest('li') : null;
+      var backButton = detailPage.querySelector('.project-back');
+
+      function openProject(projectId) {
+        var project = projects[projectId];
+        if (!project) return;
+
+        title.textContent = project.title;
+        tag.textContent = project.tag;
+        heroImage.src = project.image;
+        heroImage.alt = project.title;
+        description.textContent = project.description;
+        githubLink.href = project.github;
+
+        if (project.live) {
+          liveLink.href = project.live;
+          liveLink.setAttribute('aria-disabled', 'false');
+          if (liveLinkItem) {
+            liveLinkItem.style.display = '';
+          }
+        } else {
+          liveLink.removeAttribute('href');
+          liveLink.setAttribute('aria-disabled', 'true');
+          if (liveLinkItem) {
+            liveLinkItem.style.display = 'none';
+          }
+        }
+
+        galleryItems.forEach(function (item, index) {
+          var mediaSrc = project.gallery[index] || project.image;
+          var isVideo = /\.(mp4|webm|ogg)$/i.test(mediaSrc);
+          var media = document.createElement(isVideo ? 'video' : 'img');
+
+          item.innerHTML = '';
+          media.src = mediaSrc;
+
+          if (isVideo) {
+            media.controls = true;
+            media.muted = true;
+            media.playsInline = true;
+            media.preload = 'metadata';
+            media.setAttribute('aria-label', project.title + ' gallery video ' + (index + 1));
+          } else {
+            media.alt = project.title + ' gallery image ' + (index + 1);
+          }
+
+          item.appendChild(media);
+        });
+
+        techList.innerHTML = '';
+        project.technologies.forEach(function (tech) {
+          var item = document.createElement('li');
+          item.textContent = tech;
+          techList.appendChild(item);
+        });
+
+        detailPage.classList.add('is-open');
+        detailPage.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('project-detail-open');
+        detailPage.scrollTo(0, 0);
+        backButton.focus();
+      }
+
+      function closeProject() {
+        detailPage.classList.remove('is-open');
+        detailPage.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('project-detail-open');
+      }
+
+      document.querySelectorAll('.project-card[data-project]').forEach(function (card) {
+        card.addEventListener('click', function (event) {
+          if (event.target.closest('a')) {
+            event.preventDefault();
+          }
+          openProject(card.getAttribute('data-project'));
+        });
+
+        card.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openProject(card.getAttribute('data-project'));
+          }
+        });
+      });
+
+      backButton.addEventListener('click', closeProject);
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && detailPage.classList.contains('is-open')) {
+          closeProject();
+        }
+      });
+    }());
+  </script>
+
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+
+      var button = form.querySelector('.submit-btn');
+      var status = form.querySelector('.form-status');
+
+      function setStatus(message, type) {
+        status.textContent = message;
+        status.classList.remove('is-error', 'is-success');
+        if (type) {
+          status.classList.add(type);
+        }
+      }
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        button.disabled = true;
+        button.textContent = 'Sending...';
+        setStatus('', '');
+
+        try {
+          var formData = new FormData(form);
+          var response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: formData.get('name'),
+              email: formData.get('email'),
+              message: formData.get('message')
+            })
+          });
+
+          var result = {};
+          var responseText = await response.text();
+
+          if (responseText) {
+            try {
+              result = JSON.parse(responseText);
+            } catch (parseError) {
+              throw new Error('Contact backend is not returning JSON. Please run with Vercel or deploy first.');
+            }
+          }
+
+          if (!response.ok) {
+            throw new Error(result.message || 'Message could not be sent.');
+          }
+
+          form.reset();
+          setStatus('Message sent successfully.', 'is-success');
+        } catch (error) {
+          setStatus(error.message || 'Something went wrong. Please try again.', 'is-error');
+        } finally {
+          button.disabled = false;
+          button.textContent = 'Submit';
+        }
+      });
+    }());
+  </script>
+
+	</body>
+
+</html>

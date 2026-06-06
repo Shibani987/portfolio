@@ -1,0 +1,17 @@
+{
+  "name": "shibani-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev",
+    "deploy": "vercel deploy",
+    "deploy:prod": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "vercel": "^54.9.1"
+  }
+}
