@@ -1,4 +1,9 @@
-	<html><link rel="stylesheet"
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><style>
     
 html,
@@ -1896,11 +1901,299 @@ body.reveal-ready #connect-section{
         width: 78px;
     }
 }
+
+@media (max-width: 600px) {
+    html,
+    body{
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+    }
+
+    #marco,
+    #about-section,
+    #services-section,
+    #projects-section,
+    #connect-section{
+        width: 100%;
+        min-height: auto;
+    }
+
+    #marco{
+        --cat-width: min(58vw, 230px);
+        height: auto;
+        min-height: 760px;
+        overflow: hidden;
+    }
+
+    #intro-text,
+    #intro-arrow{
+        display: none;
+    }
+
+    #gato{
+        left: 8px;
+        bottom: 76px;
+    }
+
+    #portfolio-card{
+        --card-scale: 1;
+        left: 16px;
+        right: 16px;
+        top: 118px;
+        width: auto;
+        height: auto;
+        min-height: 560px;
+        padding: 22px 18px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        transform: translateY(80px);
+        animation: show-mobile-card 1.1s ease 1.1s forwards;
+        overflow: visible;
+    }
+
+    #portfolio-card::before,
+    #portfolio-card::after,
+    .corner-bottom-left,
+    .corner-bottom-right,
+    .portrait-arrow{
+        display: none;
+    }
+
+    .card-nav,
+    .card-copy,
+    .card-portrait,
+    .card-scroll,
+    .card-social{
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        transform: none;
+    }
+
+    .card-nav{
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+        font-size: 14px;
+    }
+
+    .card-portrait{
+        order: 2;
+        width: min(72vw, 270px);
+        height: 300px;
+    }
+
+    .card-copy{
+        order: 3;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .card-copy .eyebrow{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .card-copy .small{
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .card-copy h1{
+        margin-bottom: 12px;
+        font-size: clamp(34px, 10vw, 44px);
+        white-space: normal;
+    }
+
+    .card-copy .role{
+        max-width: 100%;
+        font-size: 17px;
+    }
+
+    .card-scroll{
+        order: 4;
+        margin: 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .card-social{
+        order: 5;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card-social a{
+        width: 40px;
+        height: 40px;
+    }
+
+    #about-section,
+    #services-section,
+    #projects-section,
+    #connect-section{
+        padding: 42px 16px;
+        overflow: hidden;
+    }
+
+    .about-card{
+        width: 100%;
+        aspect-ratio: auto;
+        min-height: auto;
+        padding: 24px 12px;
+        border-radius: 8px;
+    }
+
+    .about-paper{
+        width: 100%;
+        border-radius: 8px;
+        padding: 26px 18px;
+    }
+
+    .about-visual{
+        width: min(88vw, 310px);
+        min-height: 360px;
+    }
+
+    .about-callout,
+    .about-arrow,
+    .works-label,
+    .works-arrow,
+    .idea-text,
+    .idea-arrow,
+    .service-path{
+        display: none;
+    }
+
+    .services-stage{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 26px;
+        padding: 0;
+    }
+
+    .services-person-wrap{
+        order: 5;
+        width: min(70vw, 260px);
+    }
+
+    .service-card{
+        width: 100%;
+        max-width: none;
+        min-height: 230px;
+        aspect-ratio: auto;
+        border-radius: 8px;
+    }
+
+    .service-note{
+        min-height: auto;
+        border-radius: 8px;
+        padding: 38px 20px 22px;
+    }
+
+    .service-note h3{
+        font-size: 22px;
+    }
+
+    .service-note p{
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .ready-pill{
+        display: block;
+        position: relative;
+        order: 6;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        min-width: 0;
+        font-size: 22px;
+        border-radius: 8px;
+    }
+
+    #tools-section{
+        width: 100%;
+        padding: 42px 16px;
+    }
+
+    .tools-copy{
+        width: 100%;
+    }
+
+    .tools-balls{
+        padding: 24px 0 0;
+        gap: 10px;
+    }
+
+    .tool-ball{
+        --ball-size: clamp(72px, 27vw, 96px);
+        transform: none;
+    }
+
+    .tool-ball:hover{
+        transform: translateY(-8px);
+    }
+
+    .projects-grid{
+        width: 100%;
+    }
+
+    .project-card{
+        min-height: auto;
+        border-radius: 8px;
+        padding: 18px;
+    }
+
+    .project-thumb{
+        height: 210px;
+    }
+
+    .project-card h3{
+        margin-right: 40px;
+        font-size: 22px;
+    }
+
+    .project-card p{
+        font-size: 14px;
+    }
+
+    .connect-body{
+        width: 100%;
+    }
+
+    .connect-left{
+        display: none;
+    }
+
+    .contact-panel{
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        border-radius: 8px;
+    }
+}
+
+@keyframes show-mobile-card {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     
    
 
 
 </style>
+</head>
     <body>
   <script>
     document.body.classList.add('reveal-ready');
@@ -1923,7 +2216,7 @@ body.reveal-ready #connect-section{
       <nav class="card-nav">
         <a href="#projects-section">WORK</a>
         <a href="#services-section">SERVICES</a>
-        <span>RESUME</span>
+        <a href="https://drive.google.com/file/d/1bZXmpvxv1NrPiNTXPlBiUfuodbtocfOv/view?usp=sharing" target="_blank">RESUME</a>
       </nav>
       <div class="card-copy">
         <p class="eyebrow">welcome to my portfolio</p>
