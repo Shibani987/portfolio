@@ -1925,6 +1925,135 @@ body.reveal-ready #connect-section{
     }
 }
 
+@media (min-width: 601px) and (max-width: 900px) {
+    #services-section{
+        min-height: auto;
+        padding: 34px 16px 70px;
+    }
+
+    .services-stage{
+        position: relative;
+        display: block;
+        width: min(100%, 900px);
+        aspect-ratio: 1.34;
+        margin: 28px auto 0;
+        padding: 0;
+    }
+
+    .service-path,
+    .works-label,
+    .works-arrow,
+    .idea-text,
+    .idea-arrow,
+    .ready-pill{
+        display: block;
+    }
+
+    .service-path{
+        transform: translateX(34px);
+    }
+
+    .services-person-wrap{
+        position: absolute;
+        left: 0;
+        top: auto;
+        bottom: -7%;
+        order: initial;
+        justify-self: auto;
+        width: 32%;
+        transform: none;
+    }
+
+    .service-card{
+        position: absolute;
+        width: 29%;
+        max-width: none;
+        aspect-ratio: 1;
+        order: initial;
+        justify-self: auto;
+    }
+
+    .service-design{
+        left: 32%;
+        top: 9%;
+        transform: rotate(13deg);
+    }
+
+    .service-plan{
+        left: auto;
+        right: 4%;
+        top: 0;
+        transform: rotate(-10deg);
+    }
+
+    .service-launch{
+        left: 32%;
+        top: 57%;
+        transform: rotate(14deg);
+    }
+
+    .service-build{
+        left: auto;
+        right: 1%;
+        top: 47%;
+        transform: rotate(-10deg);
+    }
+
+    .service-note{
+        position: absolute;
+        left: 13%;
+        top: 20%;
+        width: 74%;
+        min-height: 58%;
+        padding: 10% 9%;
+    }
+
+    .service-note h3{
+        font-size: clamp(12px, 2.4vw, 18px);
+    }
+
+    .service-note p{
+        font-size: clamp(7px, 1.35vw, 10px);
+        line-height: 1.25;
+    }
+
+    .works-label{
+        left: 18%;
+        top: 22%;
+        bottom: auto;
+        font-size: clamp(15px, 2.9vw, 24px);
+    }
+
+    .works-arrow{
+        left: 15%;
+        top: 30%;
+        bottom: auto;
+        width: clamp(42px, 7vw, 68px);
+    }
+
+    .idea-text{
+        left: -1%;
+        top: 54%;
+        bottom: auto;
+        font-size: clamp(14px, 2.5vw, 22px);
+    }
+
+    .idea-arrow{
+        left: 3%;
+        top: 47%;
+        bottom: auto;
+        width: clamp(46px, 7vw, 76px);
+    }
+
+    .ready-pill{
+        position: absolute;
+        right: 8%;
+        bottom: 4%;
+        min-width: 190px;
+        font-size: clamp(18px, 3vw, 28px);
+    }
+}
+
 @media (max-width: 600px) {
     html,
     body{
