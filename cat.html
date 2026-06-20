@@ -838,7 +838,7 @@ body.reveal-ready #services-section.section-items-in-view .ready-pill{ transitio
     cursor: pointer;
     user-select: none;
     transform: translateY(22%);
-    transition: transform .35s ease, filter .35s ease;
+    transition: transform .32s cubic-bezier(.2,.8,.2,1), filter .32s ease, box-shadow .32s ease;
     background:
         radial-gradient(circle at 30% 22%, rgba(255,255,255,.95) 0 7%, rgba(255,255,255,.4) 8% 16%, transparent 17%),
         radial-gradient(circle at 35% 30%, var(--ball-color), var(--ball-dark) 72%);
@@ -849,8 +849,16 @@ body.reveal-ready #services-section.section-items-in-view .ready-pill{ transitio
 }
 
 .tool-ball:hover{
-    transform: translate(var(--move-x, 0), calc(22% + var(--move-y, -44px))) rotate(var(--spin, 10deg));
-    filter: brightness(1.12);
+    transform: translateY(calc(22% - var(--hover-lift, 22px))) rotate(var(--hover-tilt, -5deg));
+    filter: brightness(1.06);
+    box-shadow:
+        inset -18px -22px 32px rgba(0,0,0,.55),
+        inset 16px 15px 24px rgba(255,255,255,.28),
+        0 30px 24px rgba(0,0,0,.42);
+}
+
+.tool-ball:nth-child(even){
+    --hover-tilt: 5deg;
 }
 
 .tool-ball small{
@@ -884,7 +892,9 @@ body.reveal-ready #tools-section .tool-ball{
         opacity .5s ease,
         translate .66s cubic-bezier(.2,.8,.2,1),
         scale .66s cubic-bezier(.2,.8,.2,1),
-        filter .3s ease;
+        transform .32s cubic-bezier(.2,.8,.2,1),
+        filter .32s ease,
+        box-shadow .32s ease;
     will-change: opacity, translate, scale;
 }
 
@@ -914,6 +924,10 @@ body.reveal-ready #tools-section.section-items-in-view .tool-ball:nth-child(13){
 body.reveal-ready #tools-section.section-items-in-view .tool-ball:nth-child(14){ transition-delay: 1.12s; }
 body.reveal-ready #tools-section.section-items-in-view .tool-ball:nth-child(15){ transition-delay: 1.18s; }
 body.reveal-ready #tools-section.section-items-in-view .tool-ball:nth-child(16){ transition-delay: 1.24s; }
+
+body.reveal-ready #tools-section.section-items-in-view .tool-ball:hover{
+    transition-delay: 0s;
+}
 
 #projects-section{
     min-height: 100vh;
@@ -1931,7 +1945,7 @@ body.reveal-ready #connect-section{
     }
 
     .tool-ball:hover{
-        transform: translate(var(--move-x, 0), var(--move-y, -34px)) rotate(var(--spin, 10deg));
+        transform: translateY(-18px) rotate(var(--hover-tilt, -5deg));
     }
 
     .projects-grid{
@@ -2652,7 +2666,7 @@ body.reveal-ready #connect-section{
     }
 
     .tool-ball:hover{
-        transform: translateY(-8px);
+        transform: translateY(-10px) rotate(var(--hover-tilt, -4deg));
     }
 
     .projects-grid{
